@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,9 +9,7 @@ import reducer, { initialState } from './contexts/reducer';
 
 ReactDOM.render(
   <DataLayerContextProvider initialState = { initialState } reducer= { reducer }>
-    <React.StrictMode>
       <App />
-    </React.StrictMode>
   </DataLayerContextProvider>,
   document.getElementById('root')
 );

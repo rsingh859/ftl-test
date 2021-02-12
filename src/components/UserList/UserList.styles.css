@@ -1,0 +1,12 @@
+.user-list-title {
+  justify-content: center;
+  align-items: center;
+  font-size: 51px;
+  font-family: "Sacramento", cursive;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+.user-lists {
+  margin: 20px 0;
+}

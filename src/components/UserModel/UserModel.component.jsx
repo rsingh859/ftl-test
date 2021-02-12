@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './UserModel.styles.css';
+import { Modal, ModalBody, ModalHeader } from 'reactstrap';
 
-const UserModel = ({ real_name, ...otherprops }) => {
-    console.log(otherprops);
+import ShowTimeRange from '../ShowTimeRange/ShowTimeRange.component';
+
+const UserModel = ({ real_name, activity_periods }) => {
+    const [ismodalOpen, setIsModalOpen ] = useState(false); 
+
     return (
         <div className='user-container'>
-            <button>{real_name}</button>
+            <div className='user-display' onClick={() => setIsModalOpen(ismodalOpen => !ismodalOpen)}>{real_name}</div>
+            <Modal isOpen={ismodalOpen} toggle={() => setIsModalOpen(ismodalOpen => !ismodalOpen)}>
+            <ModalHeader toggle={() => setIsModalOpen(ismodalOpen => !ismodalOpen)}>Active Time Periods</ModalHeader>
+                <ModalBody>
+                    <ShowTimeRange activity_periods={activity_periods} />
+                </ModalBody>
+            </Modal>
         </div>
     );
 }
 
-export default UserModel;
+export default React.memo(UserModel);
