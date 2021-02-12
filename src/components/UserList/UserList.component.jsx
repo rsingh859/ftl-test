@@ -14,7 +14,6 @@ const UserList = () => {
     useEffect(() => {
       axios.get('https://037c91d4-06ae-4c9a-b7ee-8f3081759560.mock.pstmn.io/testFTL')
            .then(res => {
-             console.log(res.data);
              dispatch({
                type: 'SET_USER',
                user: res.data
