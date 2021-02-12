@@ -50,4 +50,8 @@
 
 --For Displaying the User Modal
 
-//Rendering the activity_period for each user in a modal, and using the first
+//Rendering the activity_period for each user in a modal, and using the start_date of the first item of the activity_period array to pass it in the Calendar View ( only extracting the date part )
+
+//Calendar being used - 'react-calendar'
+
+//Using Nested Modals for viewing the Calendar. Using button click to toggle calendar View
